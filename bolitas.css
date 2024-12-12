@@ -1,6 +1,7 @@
 body {
-  background: ghostwhite;
+  background: rgb(238, 241, 41);
   text-align: center;
+  margin: 0;
 }
 
 #box {
@@ -9,17 +10,35 @@ body {
   height: 500px;
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 5px solid darkgrey;
+  display: flex;
+  justify-content: space-between;
+}
+
+img {
+  width: 8%;
+}
+
+h1, h2 {
+  background: linear-gradient(to right, red, yellow, red);
+  margin: auto;
+}
+
+h2 {
+  background: linear-gradient(to right, red, yellow, red);
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 5%;
 }
 
 #granBola {
   width: 50px;
   height: 50px;
   margin: auto;
-  margin-top: 5%;
+  margin-top: 1%;
   border-radius: 50%;
   animation: rotar 0.2s linear infinite;
   border: 1px solid rgb(0, 0, 0);
@@ -32,94 +51,133 @@ body {
   position: absolute;
   transition: transform 1s ease;
   animation: rotar 1s linear infinite;
-
 }
 
+#leftblock, #rightblock {
+  width: 25vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background-color: rgb(235, 23, 23);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#leftblock {
+  left: 0;
+}
+
+#rightblock {
+  right: 0;
+  background-color: rgb(235, 23, 23);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center; 
+  font-size: 1em;
+}
+
+#listaTECH {
+  list-style-type: none;
+  margin-top: 0;
+  padding: 0;
+  text-align: center;  
+  flex-grow: 1;  
+}
+
+#listaTECH li {
+  margin-bottom: 5px;
+  margin-top: 2%;
+  padding: 5px;
+  background: linear-gradient(to right, red, yellow, red);
+  border-radius: 5px;
+}
+
+@keyframes rotar {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.exploding {
+  animation: explode 0.7s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+
+  25% {
+    transform: scale(1.5) rotate(120deg) skew(10deg, 10deg);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(0.8) rotate(-90deg) skew(-10deg, -10deg);
+    opacity: 0.6;
+  }
+
+  75% {
+    transform: scale(2.5) rotate(180deg) skew(20deg, -20deg);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(0) rotate(720deg);
+    opacity: 0;
+  }
+}s
+
+/* Colores de las bolas */
 .green {
-  background: radial-gradient(circle at 0% 0%,
-      hsl(138, 93%, 28%) 25%,
-      hsl(0, 0%, 100%) 75%,
-      hsl(110, 89%, 48%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(138, 93%, 28%) 25%, hsl(0, 0%, 100%) 75%, hsl(110, 89%, 48%) 100%);
   border: 1px solid rgb(215, 243, 222);
 }
 
 .yellow {
-  background: radial-gradient(circle at 0% 0%,
-      hsl(59, 92%, 53%) 25%,
-      hsl(0, 0%, 100%) 75%,
-      hsl(66, 85%, 82%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(59, 92%, 53%) 25%, hsl(0, 0%, 100%) 75%, hsl(66, 85%, 82%) 100%);
   border: 1px solid rgb(237, 243, 215);
 }
 
 .blue {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(236, 92%, 53%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(244, 85%, 82%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(236, 92%, 53%) 25%, hsl(0, 0%, 100%) 75%, hsl(244, 85%, 82%) 100%);
   border: 1px solid rgb(215, 223, 243);
-  ;
 }
 
 .purple {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(283, 92%, 43%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(298, 85%, 82%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(283, 92%, 43%) 25%, hsl(0, 0%, 100%) 75%, hsl(298, 85%, 82%) 100%);
   border: 1px solid rgb(234, 215, 243);
 }
 
 .orange {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(22, 94%, 52%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(41, 64%, 73%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(22, 94%, 52%) 25%, hsl(0, 0%, 100%) 75%, hsl(41, 64%, 73%) 100%);
   border: 1px solid rgb(243, 236, 215);
 }
 
 .cyan {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(175, 98%, 53%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(182, 76%, 77%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(175, 98%, 53%) 25%, hsl(0, 0%, 100%) 75%, hsl(182, 76%, 77%) 100%);
   border: 1px solid rgb(215, 243, 243);
 }
 
 .red {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(0, 96%, 52%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(0, 77%, 79%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(0, 96%, 52%) 25%, hsl(0, 0%, 100%) 75%, hsl(0, 77%, 79%) 100%);
   border: 1px solid rgb(243, 215, 215);
 }
 
 .pink {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(323, 85%, 51%) 25%,
-          hsl(304, 43%, 78%) 75%,
-          hsl(313, 86%, 78%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(323, 85%, 51%) 25%, hsl(304, 43%, 78%) 75%, hsl(313, 86%, 78%) 100%);
   border: 1px solid rgb(243, 215, 215);
 }
 
 .brown {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(24, 94%, 13%) 25%,
-          hsl(304, 43%, 78%) 75%,
-          hsl(35, 41%, 48%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(24, 94%, 13%) 25%, hsl(304, 43%, 78%) 75%, hsl(35, 41%, 48%) 100%);
   border: 1px solid rgb(243, 215, 215);
 }
 
 .black {
-  background: radial-gradient(circle at 0% 0%,
-          hsl(0, 0%, 0%) 25%,
-          hsl(0, 0%, 100%) 75%,
-          hsl(0, 0%, 43%) 100%);
+  background: radial-gradient(circle at 0% 0%, hsl(0, 0%, 0%) 25%, hsl(0, 0%, 100%) 75%, hsl(0, 0%, 43%) 100%);
   border: 1px solid rgb(243, 215, 215);
-}
-
-
-
-@keyframes rotar {
-  100% {
-      transform: rotate(360deg);
-  }
 }
